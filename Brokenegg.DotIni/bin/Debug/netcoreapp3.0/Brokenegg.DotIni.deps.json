@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Brokenegg.DotIni/1.0.0": {
+        "runtime": {
+          "Brokenegg.DotIni.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Brokenegg.DotIni/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

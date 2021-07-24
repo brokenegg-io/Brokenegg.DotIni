@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "1uzQEW2+GrTG/ufMY8LqnLIDNp/rpz+wBfVZJ+G211rKV5RULItuUgmM0Sr3fmTXEP+caVGeoObBjAvW6nn98w==",
+  "success": true,
+  "projectFilePath": "D:\\Brokenegg.DotIni\\Brokenegg.DotIni\\Brokenegg.DotIni.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marck\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\marck\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\marck\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
