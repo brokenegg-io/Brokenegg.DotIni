@@ -2058,7 +2058,7 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "Brokenegg.DotIni/1.0.0": {
+      "Brokenegg.DotIni/0.0.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
         "compile": {
@@ -6827,7 +6827,7 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "Brokenegg.DotIni/1.0.0": {
+    "Brokenegg.DotIni/0.0.1": {
       "type": "project",
       "path": "../Brokenegg.DotIni/Brokenegg.DotIni.csproj",
       "msbuildProject": "../Brokenegg.DotIni/Brokenegg.DotIni.csproj"
@@ -6835,7 +6835,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
-      "Brokenegg.DotIni >= 1.0.0",
+      "Brokenegg.DotIni >= 0.0.1",
       "MSTest.TestAdapter >= 1.3.2",
       "MSTest.TestFramework >= 1.3.2",
       "Microsoft.NET.Test.Sdk >= 15.9.0"

@@ -63,5 +63,8 @@ namespace Brokenegg.DotIni.Utils
         {
             return new IniSection(RegexExpressions.StripeAnything(line, RegexExpressions.SectionRegex, new List<int>() { 2 }).FirstOrDefault());
         }
+
+        public static string ToStringSection(string name) => $@"[{name}]";
+        public static string ToStringKeyPar(string name, string value) => $@"{name}={value}";
     }
 }
