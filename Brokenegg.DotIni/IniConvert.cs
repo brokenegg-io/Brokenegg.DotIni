@@ -7,6 +7,11 @@ namespace Brokenegg.DotIni
 {
     public class IniConvert
     {
+        /// <summary>
+        /// Deserialize object to IniFile
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public static IniFile DeserializeObject(string text)
         {
             List<string> lines = IniUtils.StringToList(text);
@@ -19,7 +24,11 @@ namespace Brokenegg.DotIni
             });
             return ini;
         }
-
+        /// <summary>
+        /// SerializeObject
+        /// </summary>
+        /// <param name="iniFile"></param>
+        /// <returns></returns>
         public static string SerializeObject(IniFile iniFile)
         {
             var ini = new StringBuilder();
