@@ -28,10 +28,10 @@ var iniFile = IniConvert.DeserializeObject(file);
 iniFile.AddSection("section");
 
 //adding key-par
-iniFile .AddKeyParLastSection("lang", "enUS");
+iniFile.AddKeyParLastSection("lang", "enUS");
 
 //parsing back to string
-var newContent = inifile.ToString();
+var newContent = iniFile.ToString();
 
 ```
 
