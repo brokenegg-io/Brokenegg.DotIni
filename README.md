@@ -4,8 +4,7 @@ DotIni is a library for .Net that allows you to read, convert and save ini files
 
 ## Installation
 
-We are under avaliation by the Microsoft Team, so fo now there is our NugetPage
-[brokenegg.io](https://www.nuget.org/profiles/brokenegg.io)
+Our profile on the NuGet library [brokenegg.io](https://www.nuget.org/profiles/brokenegg.io)
 
 Use the package manager [NuGet](https://www.nuget.org/) to install DotIni.
 
