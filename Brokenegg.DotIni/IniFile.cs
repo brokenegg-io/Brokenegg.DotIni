@@ -1,4 +1,4 @@
-﻿using Brokenegg.DotIni.Utils;
+using Brokenegg.DotIni.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,16 +61,17 @@ namespace Brokenegg.DotIni
         /// <returns></returns>
         public override string ToString()
         {
-            var builder = new StringBuilder();
+            var ini = new StringBuilder();
             this.Sections.ForEach(s =>
             {
-                builder.AppendLine(IniUtils.ToStringSection(s.SectionName));
+                ini.AppendLine(s.ToIniString());
                 s.Keys.ForEach(k =>
                 {
-                    builder.Append(IniUtils.ToStringKeyPar(k.Name, k.KeyValue));
+                    ini.AppendLine(k.ToIniString());
                 });
             });
-            return builder.ToString();
+
+            return ini.ToString();
         }
     }
 }
