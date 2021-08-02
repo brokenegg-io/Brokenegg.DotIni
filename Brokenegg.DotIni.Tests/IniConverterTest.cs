@@ -23,15 +23,5 @@ namespace Brokenegg.DotIni.Tests
             var ini = IniConvert.DeserializeObject(test);
             Assert.IsTrue(ini.Sections.Count > 0);
         }
-
-        [TestMethod]
-        public void RightSerialization()
-        {
-            var ini = new IniFile();
-            ini.AddSection("section");
-            ini.AddKeyParLastSection("test", "none");
-            var content = ini.ToString();
-            Assert.IsTrue(content.Equals("[section]\r\ntest=none\r\n"));
-        }
     }
 }
