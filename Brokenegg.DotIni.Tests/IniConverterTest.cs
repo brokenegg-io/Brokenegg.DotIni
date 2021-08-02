@@ -25,7 +25,9 @@ namespace Brokenegg.DotIni.Tests
         public void RightSerialization()
         {
             var ini = new IniFile();
-            var content = 
+            ini.AddSection("section");
+            ini.AddKeyParLastSection("test", "none");
+            ini.ToString();
         }
     }
 }

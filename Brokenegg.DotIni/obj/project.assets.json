@@ -13,7 +13,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "0.0.1",
     "restore": {
       "projectUniqueName": "D:\\Brokenegg.DotIni\\Brokenegg.DotIni\\Brokenegg.DotIni.csproj",
       "projectName": "Brokenegg.DotIni",

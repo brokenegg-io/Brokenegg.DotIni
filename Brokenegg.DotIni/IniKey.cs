@@ -26,12 +26,15 @@ namespace Brokenegg.DotIni
         public string GetString() => GetValue<string>();
         public decimal GetDecimal() => GetValue<decimal>();
         public bool GetBoolean() => GetValue<bool>();
-
-        public IniKey(string name, IniValue value)
+        private void _Constructor(string name, IniValue value)
         {
             this.Name = name;
             this.Value = value;
         }
+
+        public IniKey(string name, string value) => _Constructor(name, new IniValue(value.ToString()));
+        public IniKey(string name, int value) => _Constructor(name, new IniValue(value.ToString()));
+        public IniKey(string name, IniValue value) => _Constructor(name, value);
 
         public string ToIniString() => $"{this.Name}={this.KeyValue}";
     }
