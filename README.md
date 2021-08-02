@@ -40,7 +40,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-[we@brokenegg.io](mailto:we@brokenegg.io)
+[get@brokenegg.io](mailto:get@brokenegg.io)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
