@@ -1,4 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Brokenegg.DotIni.Tests
 {
@@ -27,7 +30,8 @@ namespace Brokenegg.DotIni.Tests
             var ini = new IniFile();
             ini.AddSection("section");
             ini.AddKeyParLastSection("test", "none");
-            ini.ToString();
+            var content = ini.ToString();
+            Assert.IsTrue(content.Equals("[section]\r\ntest=none\r\n"));
         }
     }
 }
