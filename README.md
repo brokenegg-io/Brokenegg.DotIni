@@ -12,6 +12,14 @@
 
 DotIni is a library for .Net that allows you to read, convert and save ini files, important for envinronment variables.
 
+## Quick links
+
+* [Installation](#installation)
+*  [Usage](#usage)
+* [Contributing](#contributing)
+* [Roadmap](#roadmap)
+* [License](#license)
+
 ## Installation
 
 Our profile on the NuGet library [brokenegg.io](https://www.nuget.org/profiles/brokenegg.io)
@@ -51,6 +59,12 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 [get@brokenegg.io](mailto:get@brokenegg.io)
+
+## Roadmap
+
+- [x] Implement basic serialization and deserialization to be used. Planned to v0.0.5
+- [ ] Allow to convert any class into an INI file structure.  Planned to v0.0.6
+- [ ] Start github wiki page and begin documentation.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
