@@ -91,10 +91,11 @@ Please make sure to update tests as appropriate.
 
 ## Roadmap
 
-- [x] Implement basic serialization and deserialization to be used. Planned to v0.0.5
-- [ ] Allow to convert any class into an INI file structure.  Planned to v0.0.6
-- [ ] Start github wiki page and begin documentation.
-- [ ] Convert values from Key-par values to String/Int/Decimal and Date. Planned to v0.0.7
+- [x] Implement basic serialization and deserialization to be used. Planned to v0.0.4;
+- [ ] Cover at least 60% of the projects on unity tests;
+- [ ] Allow to convert any class into an INI file structure.  Planned to v0.0.6;
+- [ ] Start github wiki page and begin documentation;
+- [ ] Convert values from Key-par values to String/Int/Decimal and Date. Planned to v0.0.7.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
