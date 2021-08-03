@@ -1,4 +1,4 @@
-﻿using Brokenegg.DotIni.Settings;
+using Brokenegg.DotIni.Settings;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,7 +35,9 @@ namespace Brokenegg.DotIni.Utils
         /// <param name="line"></param>
         /// <returns></returns>
         public static bool IsKeyPar(string line) => RegexExpressions.IsKeyPar(line);
-        
+
+        internal static bool OnlyLetters(string value) => RegexExpressions.OnlyLetters(value);
+
         /// <summary>
         /// Convert a ini key-par value to IniKey
         /// </summary>
