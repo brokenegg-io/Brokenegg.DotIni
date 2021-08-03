@@ -9,12 +9,13 @@
 <img src="https://raw.githubusercontent.com/brokenegg-io/Brokenegg.DotIni/master/dotini.png" alt="drawing" width="128"/>
 
 DotIni is a library for .Net that allows you to serialize and deserialize INI files.
-This is no a Json/XML (des)serializer in any way, shape or form, it is intended to work only with ini files as shown bellow:
+This is not a Json/XML (des)serializer in any way, shape or form, it is intended to work only with ini files as shown bellow:
 
 ```ini
 [section]
 attribute=value
 ```
+We are currently in <strong>alpha version</strong> and we advise to not use in a production environment in any way whatsoever. 
 
 ## Quick links
 
@@ -55,11 +56,11 @@ iniFile.AddSection("section");
 iniFile.AddKeyParLastSection("lang", "enUS");
 
 //parsing to string
-var newContent = iniFile.ToString();
+var content = iniFile.ToString();
 
 ```
 
-The serialization value in the variable `newContent` should be this one:
+The serialization value in the variable `content` should be this one:
 ```ini
 [section]
 lang=enUS
