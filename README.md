@@ -1,8 +1,8 @@
 # Brokenegg.io DotIni
 
-![GitHub](https://img.shields.io/github/license/brokenegg-io/Brokenegg.DotIni)
-[![version](https://img.shields.io/badge/version-0.0.4-yellow.svg)](https://semver.org)
-![fluxo de trabalho de exemplo](https://github.com/brokenegg-io/Brokenegg.DotIni/actions/workflows/ci.yml/badge.svg)
+![GitHub License](https://img.shields.io/github/license/brokenegg-io/Brokenegg.DotIni)
+[![Version](https://img.shields.io/badge/version-0.0.4-yellow.svg)](https://semver.org)
+![Actions](https://github.com/brokenegg-io/Brokenegg.DotIni/actions/workflows/ci.yml/badge.svg)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/brokenegg-io/Brokenegg.DotIni/master)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Brokenegg.DotIni.svg)](https://www.nuget.org/packages/Brokenegg.DotIni/)
 
@@ -92,10 +92,10 @@ Please make sure to update tests as appropriate.
 ## Roadmap
 
 - [x] Implement basic serialization and deserialization to be used. Planned to v0.0.4;
-- [ ] Cover at least 60% of the projects on unity tests;
-- [ ] Allow to convert any class into an INI file structure.  Planned to v0.0.6;
+- [ ] Cover at least 60% of the projects on unity tests. Planned to v0.1.0;
+- [ ] Allow to convert any class into an INI file structure. Planned to v0.2.0;
 - [ ] Start github wiki page and begin documentation;
-- [ ] Convert values from Key-par values to String/Int/Decimal and Date. Planned to v0.0.7.
+- [ ] Convert values from Key-par values to String/Int/Decimal and Date. Planned to v0.3.0.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
