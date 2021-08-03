@@ -20,8 +20,6 @@ namespace Brokenegg.DotIni
         {
             this.Keys = new List<IniKey>();
             this.SectionName = sectionName;
-
-            this.Validate();
         }
         public T GetValue<T>(string name)
         {

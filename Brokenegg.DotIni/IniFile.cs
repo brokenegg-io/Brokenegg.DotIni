@@ -1,4 +1,5 @@
 using Brokenegg.DotIni.Exceptions;
+using Brokenegg.DotIni.Interfaces;
 using Brokenegg.DotIni.Utils;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace Brokenegg.DotIni
 {
-    public class IniFile
+    public class IniFile : IIniFile
     {
         /// <summary>
         /// IniFile sections

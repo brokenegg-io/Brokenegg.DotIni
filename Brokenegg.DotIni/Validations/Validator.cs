@@ -1,3 +1,4 @@
+using Brokenegg.DotIni.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,31 @@ namespace Brokenegg.DotIni.Validations
     {
         public List<String> Notifications { get; set; }
 
-        public bool IsValid() => this.Notifications.Any();
-
-        public Validator IsNullOrEmpty(string value, string response)
+        public Validator()
         {
-            return this;
+            this.Notifications = new List<string>();
         }
 
         public string GetNotification() => String.Join(",", this.Notifications?.Select(p => p));
         public string[] GetNotifications() => this.Notifications?.ToArray();
+        public bool IsValid() => this.Notifications.Any();
+
+        public Validator IsNullOrEmpty(string value, string response)
+        {
+            if (String.IsNullOrEmpty(value)) this.Notifications.Add(response);
+            return this;
+        }
+
+        public Validator ContainSpaces(string sectionName, string response)
+        {
+            if(sectionName?.Split(' ').Length > 1) this.Notifications.Add(response);
+            return this;
+        }
+
+        public Validator OnlyContainCharacters(string sectionName, string response, bool allowAllCases)
+        {
+            if (!IniUtils.OnlyLetters(sectionName)) this.Notifications.Add(response);
+            return this;
+        }
     }
 }
