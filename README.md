@@ -19,7 +19,9 @@ attribute=value
 ## Quick links
 
 * [Installation](#installation)
-*  [Usage](#usage)
+* [Usage](#usage)
+    * [Serializing](#serializing)  
+    * [Deserializing](#deserializing)
 * [Contributing](#contributing)
 * [Roadmap](#roadmap)
 * [License](#license)
