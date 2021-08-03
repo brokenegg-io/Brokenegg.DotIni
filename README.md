@@ -1,12 +1,14 @@
 # Brokenegg.io DotIni
 
-![GitHub](https://img.shields.io/github/license/brokenegg-io/Brokenegg.DotIni)
-[![version](https://img.shields.io/badge/version-0.0.4-yellow.svg)](https://semver.org)
-![fluxo de trabalho de exemplo](https://github.com/brokenegg-io/Brokenegg.DotIni/actions/workflows/ci.yml/badge.svg)
-![GitHub branch checks state](https://img.shields.io/github/checks-status/brokenegg-io/Brokenegg.DotIni/master)
+![GitHub License](https://img.shields.io/github/license/brokenegg-io/Brokenegg.DotIni)
+[![Version](https://img.shields.io/badge/version-0.0.4-brightgreen.svg)](https://semver.org)
+![Actions](https://github.com/brokenegg-io/Brokenegg.DotIni/actions/workflows/ci.yml/badge.svg)
+![Actions](https://github.com/brokenegg-io/Brokenegg.DotIni/actions/workflows/release.yml/badge.svg)
+![GitHub branch checks state](https://img.shields.io/github/checks-status/brokenegg-io/Brokenegg.DotIni/dev)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/brokenegg-io/Brokenegg.DotIni)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Brokenegg.DotIni.svg)](https://www.nuget.org/packages/Brokenegg.DotIni/)
 
-<img src="https://raw.githubusercontent.com/brokenegg-io/Brokenegg.DotIni/master/dotini.png" alt="drawing" width="128"/>
+<img src="https://raw.githubusercontent.com/brokenegg-io/Brokenegg.DotIni/master/designs/dot_ini_transparent.png" alt="drawing" width="128"/>
 
 DotIni is a library for .Net that allows you to serialize and deserialize INI files.
 This is not a Json/XML (des)serializer in any way, shape or form, it is intended to work only with ini files as shown bellow:
@@ -91,10 +93,11 @@ Please make sure to update tests as appropriate.
 
 ## Roadmap
 
-- [x] Implement basic serialization and deserialization to be used. Planned to v0.0.5
-- [ ] Allow to convert any class into an INI file structure.  Planned to v0.0.6
-- [ ] Start github wiki page and begin documentation.
-- [ ] Convert values from Key-par values to String/Int/Decimal and Date. Planned to v0.0.7
+- [x] Implement basic serialization and deserialization to be used. Planned to v0.0.4;
+- [ ] Cover at least 60% of the projects on unity tests. Planned to v0.1.0;
+- [ ] Allow to convert any class into an INI file structure. Planned to v0.2.0;
+- [ ] Start github wiki page and begin documentation;
+- [ ] Convert values from Key-par values to String/Int/Decimal and Date. Planned to v0.3.0.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
