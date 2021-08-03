@@ -1,9 +1,11 @@
 # Brokenegg.io DotIni
 
 ![GitHub License](https://img.shields.io/github/license/brokenegg-io/Brokenegg.DotIni)
-[![Version](https://img.shields.io/badge/version-0.0.4-yellow.svg)](https://semver.org)
+[![Version](https://img.shields.io/badge/version-0.0.4-brightgreen.svg)](https://semver.org)
 ![Actions](https://github.com/brokenegg-io/Brokenegg.DotIni/actions/workflows/ci.yml/badge.svg)
-![GitHub branch checks state](https://img.shields.io/github/checks-status/brokenegg-io/Brokenegg.DotIni/master)
+![Actions](https://github.com/brokenegg-io/Brokenegg.DotIni/actions/workflows/release.yml/badge.svg)
+![GitHub branch checks state](https://img.shields.io/github/checks-status/brokenegg-io/Brokenegg.DotIni/dev)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/brokenegg-io/Brokenegg.DotIni)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Brokenegg.DotIni.svg)](https://www.nuget.org/packages/Brokenegg.DotIni/)
 
 <img src="https://raw.githubusercontent.com/brokenegg-io/Brokenegg.DotIni/master/designs/dot_ini_transparent.png" alt="drawing" width="128"/>
