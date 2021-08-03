@@ -1,3 +1,4 @@
+using Brokenegg.DotIni.Exceptions;
 using Brokenegg.DotIni.Utils;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace Brokenegg.DotIni
         /// Check if the file has sections
         /// </summary>
         /// <returns></returns>
-        public bool HasSection() => this.Sections.ToArray().Length > 0;
+        public bool HasSection() => this.Sections?.ToArray().Length > 0;
         /// <summary>
         /// Add default section to be used on cases where there is no section
         /// </summary>
@@ -32,7 +33,7 @@ namespace Brokenegg.DotIni
         public void AddSection(IniSection iniSection) => this.Sections.Add(iniSection);
         public void AddKeyParLastSection(IniKey iniKey)
         {
-            if (iniKey == null) return;
+            if (iniKey == null) throw new NullKeyException();
             this.Sections[this.Sections.Count - 1].AddIniKey(iniKey);
         }
         public void AddKeyParLastSection(string name, string value) => this.AddKeyParLastSection(new IniKey(name, value));

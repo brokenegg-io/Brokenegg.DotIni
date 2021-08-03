@@ -10,11 +10,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <NeutralLanguage>en</NeutralLanguage>
     <AssemblyVersion>0.0.5.*</AssemblyVersion>
+	<Deterministic>false</Deterministic>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Exceptions\" />
-    <Folder Include="Validations\" />
-  </ItemGroup>
 
 </Project>
