@@ -1,5 +1,7 @@
 # Brokenegg.io DotIni
 
+<img src="https://raw.githubusercontent.com/brokenegg-io/Brokenegg.DotIni/master/dotini.png" alt="drawing" width="128"/>
+
 DotIni is a library for .Net that allows you to read, convert and save ini files, important for envinronment variables.
 
 ## Installation
