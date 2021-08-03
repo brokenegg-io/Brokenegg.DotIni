@@ -6,7 +6,7 @@
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/brokenegg-io/Brokenegg.DotIni/master)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Brokenegg.DotIni.svg)](https://www.nuget.org/packages/Brokenegg.DotIni/)
 
-<img src="https://raw.githubusercontent.com/brokenegg-io/Brokenegg.DotIni/master/dotini.png" alt="drawing" width="128"/>
+<img src="https://raw.githubusercontent.com/brokenegg-io/Brokenegg.DotIni/master/designs/dot_ini_transparent.png" alt="drawing" width="128"/>
 
 DotIni is a library for .Net that allows you to serialize and deserialize INI files.
 This is not a Json/XML (des)serializer in any way, shape or form, it is intended to work only with ini files as shown bellow:
