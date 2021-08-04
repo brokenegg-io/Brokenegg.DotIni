@@ -17,11 +17,23 @@ namespace Brokenegg.DotIni.Validations
 
         public string GetNotification() => String.Join(",", this.Notifications?.Select(p => p));
         public string[] GetNotifications() => this.Notifications?.ToArray();
-        public bool IsValid() => this.Notifications.Any();
+        public bool IsValid() => !this.Notifications?.Any() ?? true;
 
         public Validator IsNullOrEmpty(string value, string response)
         {
             if (String.IsNullOrEmpty(value)) this.Notifications.Add(response);
+            return this;
+        }
+
+        public Validator HasMoreThanOne(int? count, string response)
+        {
+            if (!count.HasValue) this.Notifications.Add(response);
+            return this;
+        }
+
+        public Validator IsNull(object value, string response)
+        {
+            if (value == null) this.Notifications.Add(response);
             return this;
         }
 

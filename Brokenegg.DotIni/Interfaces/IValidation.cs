@@ -7,6 +7,6 @@ namespace Brokenegg.DotIni.Interfaces
     public interface IValidation
     {
         public bool IsValid();
-        public void Validate();
+        public void Validate(bool throwException = true);
     }
 }

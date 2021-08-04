@@ -20,6 +20,8 @@ namespace Brokenegg.DotIni
         {
             this.Keys = new List<IniKey>();
             this.SectionName = sectionName;
+
+            this.Validate();
         }
         public T GetValue<T>(string name)
         {
@@ -34,6 +36,7 @@ namespace Brokenegg.DotIni
         /// <param name="iniKey"></param>
         public void AddIniKey(IniKey iniKey)
         {
+            if (!iniKey?.IsValid() ?? false) iniKey.Validate();
             this.Keys.Add(iniKey);
         }
         /// <summary>
@@ -58,6 +61,7 @@ namespace Brokenegg.DotIni
         /// <summary>
         /// Validate a section and throws an exception if not valid
         /// </summary>
-        public void Validate() => new SectionValidations(this).Validate();
+        public void Validate(bool throwException = true) => new SectionValidations(this).Validate(throwException);
+        public bool Valid => this.IsValid();
     }
 }

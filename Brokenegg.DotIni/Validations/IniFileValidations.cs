@@ -1,20 +1,18 @@
 using Brokenegg.DotIni.Exceptions;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace Brokenegg.DotIni.Validations
 {
-    public class SectionValidations
+    public class IniFileValidations
     {
         private Validator Validator { get; set; }
-       
-        private IniSection Section { get; set; }
-        public SectionValidations(IniSection section)
+        private IniFile IniFile { get; set; }
+        public IniFileValidations(IniFile iniFile)
         {
             this.Validator = new Validator();
-            this.Section = section;
+            this.IniFile = iniFile;
         }
 
         public bool IsValid() => this.Validator.IsValid();
@@ -24,9 +22,8 @@ namespace Brokenegg.DotIni.Validations
         public void Validate(bool throwException = true)
         {
             this.Validator
-                .IsNullOrEmpty(this.Section.SectionName, "Section name should not be empty")
-                .ContainSpaces(this.Section.SectionName, "Section name should not contain any spaces")
-                .OnlyContainCharacters(this.Section.SectionName, "Invalid characters found", true);
+                .IsNull(this.IniFile, "IniFile should not be empty")
+                .HasMoreThanOne(this.IniFile?.Sections?.Count, "Key name should not be empty");
 
             if (!this.IsValid() && throwException) ThrowException();
         }

@@ -1,4 +1,4 @@
-﻿using Brokenegg.DotIni.Utils;
+using Brokenegg.DotIni.Utils;
 using System;
 
 namespace Brokenegg.DotIni
