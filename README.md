@@ -58,7 +58,7 @@ iniFile.AddSection("section");
 iniFile.AddKeyParLastSection("lang", "enUS");
 
 //parsing to string
-var content = iniFile.ToString();
+var content = IniConvert.SerializeObject(file);
 
 ```
 
