@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,5 +27,7 @@ namespace Brokenegg.DotIni.Settings
             var test = groups.Where(p => positions.Contains(p.Key)).ToList();
             return test.Select(p => p.Value.Value.ToString()).ToList();
         }
+
+        public static bool OnlyLetters(string value) =>   Regex.IsMatch(value, @"^[a-zA-Z]+$");
     }
 }

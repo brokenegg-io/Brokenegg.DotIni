@@ -16,4 +16,10 @@
     <ProjectReference Include="..\Brokenegg.DotIni\Brokenegg.DotIni.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TEST.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

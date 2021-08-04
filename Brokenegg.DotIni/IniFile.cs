@@ -1,4 +1,7 @@
+using Brokenegg.DotIni.Exceptions;
+using Brokenegg.DotIni.Interfaces;
 using Brokenegg.DotIni.Utils;
+using Brokenegg.DotIni.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,34 +9,44 @@ using System.Text;
 
 namespace Brokenegg.DotIni
 {
-    public class IniFile
+    public class IniFile : IValidation
     {
         /// <summary>
         /// IniFile sections
         /// </summary>
         public List<IniSection> Sections { get; set; }
-        private string FileName { get; set; }
+        private string FileLocation { get; set; }
 
+        public bool IsValid() => new IniFileValidations(this).IsValid();
+        public void Validate(bool throwException = true) => new IniFileValidations(this).Validate();
         public IniFile()
         {
             this.Sections = new List<IniSection>();
-            this.FileName = String.Empty;
+            this.FileLocation = String.Empty;
         }
         /// <summary>
         /// Check if the file has sections
         /// </summary>
         /// <returns></returns>
-        public bool HasSection() => this.Sections.ToArray().Length > 0;
+        public bool HasSection() => this.Sections?.ToArray().Length > 0;
         /// <summary>
         /// Add default section to be used on cases where there is no section
         /// </summary>
         public void AddDefaultSection() => this.Sections.Add(new IniSection("default"));
         public void AddSection(string name) => this.Sections.Add(new IniSection(name));
-        public void AddSection(IniSection iniSection) => this.Sections.Add(iniSection);
-        public void AddKeyParLastSection(IniKey iniKey)
+        public void AddSection(IniSection iniSection)
         {
-            if (iniKey == null) return;
+            if (!iniSection.IsValid()) iniSection.Validate();
+            this.Sections.Add(iniSection);
+        }
+        public bool AddKeyParLastSection(IniKey iniKey)
+        {
+            if (iniKey == null) throw new Exceptions.KeyNotFoundException();
+            if (!iniKey?.IsValid() ?? true) iniKey.Validate();
+            if (this.Sections.Count == 0) throw new SectionNotFoundException();
+
             this.Sections[this.Sections.Count - 1].AddIniKey(iniKey);
+            return true;
         }
         public void AddKeyParLastSection(string name, string value) => this.AddKeyParLastSection(new IniKey(name, value));
         /// <summary>
@@ -73,5 +86,21 @@ namespace Brokenegg.DotIni
 
             return ini.ToString();
         }
+        /// <summary>
+        /// Get Inifile from file
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static IniFile GetFromFile(string path)
+        {
+            var iniFile = IniConvert.DeserializeObject(FileUtils.ReadFile(path));
+            iniFile.SetFileLocation(path);
+            return iniFile;
+        }
+
+        private void SetFileLocation(string fileLocation)
+        {
+            this.FileLocation = fileLocation;
+        }        
     }
 }

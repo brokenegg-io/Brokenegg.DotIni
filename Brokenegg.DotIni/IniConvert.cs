@@ -1,3 +1,4 @@
+using Brokenegg.DotIni.Exceptions;
 using Brokenegg.DotIni.Utils;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace Brokenegg.DotIni
         public static IniFile DeserializeObject(string text)
         {
             List<string> lines = IniUtils.StringToList(text);
+
             var ini = new IniFile();
             lines.ForEach(p =>
             {

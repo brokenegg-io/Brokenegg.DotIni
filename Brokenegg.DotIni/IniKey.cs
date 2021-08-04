@@ -1,10 +1,12 @@
-﻿using System;
+using Brokenegg.DotIni.Interfaces;
+using Brokenegg.DotIni.Validations;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Brokenegg.DotIni
 {
-    public class IniKey
+    public class IniKey : IValidation
     {
         public string Name { get; set; }
         public string KeyValue
@@ -30,6 +32,8 @@ namespace Brokenegg.DotIni
         {
             this.Name = name;
             this.Value = value;
+
+            this.Validate();
         }
 
         public IniKey(string name, string value) => _Constructor(name, new IniValue(value.ToString()));
@@ -37,5 +41,9 @@ namespace Brokenegg.DotIni
         public IniKey(string name, IniValue value) => _Constructor(name, value);
 
         public string ToIniString() => $"{this.Name}={this.KeyValue}";
+
+        public bool IsValid() => new KeyValidation(this).IsValid();
+
+        public void Validate(bool throwException = true) => new KeyValidation(this).Validate(throwException);
     }
 }
