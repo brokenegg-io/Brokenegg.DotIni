@@ -32,6 +32,8 @@ namespace Brokenegg.DotIni
         {
             this.Name = name;
             this.Value = value;
+
+            this.Validate();
         }
 
         public IniKey(string name, string value) => _Constructor(name, new IniValue(value.ToString()));
