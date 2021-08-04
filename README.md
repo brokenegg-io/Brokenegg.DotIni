@@ -94,7 +94,7 @@ Please make sure to update tests as appropriate.
 ## Roadmap
 
 - [x] Implement basic serialization and deserialization to be used. Planned to v0.0.4;
-- [ ] Cover at least 60% of the projects on unity tests. Planned to v0.1.0;
+- [x] Cover at least 60% of the projects on unity tests. Planned to v0.1.0;
 - [ ] Allow to convert any class into an INI file structure. Planned to v0.2.0;
 - [ ] Start github wiki page and begin documentation;
 - [ ] Convert values from Key-par values to String/Int/Decimal and Date. Planned to v0.3.0.
